@@ -29,7 +29,7 @@ def gpt4_call(system_prompt, user_prompt, input_file):
 
 def deadline_model(source, input_file):
 
-    openai.api_key = "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"  # api key
+    openai.api_key = "" # api key
 
     # read file from 
     system_prompt = "You are the Slack Scribe assistant, designed to help users manage events and deadlines. Your current task is to extract event details from the provided message and create a structured format for event data to be passed into the Google Calendar API. Please process the message and generate the necessary event information, including the event name, date, time, duration, location, and any additional details. Ensure the output is in a clear and organized format that can be readily used for creating calendar events. Once you've generated the event data, please present it as follows:\n\nEvent Name: [Event Name]\nDate: [Event Date]\nTime: [Start Time]\nLength: [Event Length (if available)]\nLocation: [Event Location (if available)]\nDescription: [Event Description (if available)]\n\nPlease make sure the output is comprehensive and user-friendly. If any details are missing or unclear in the original message, you can make reasonable assumptions or request clarification from the user. Thank you!\n"  # model updates -> should add remote update feature maybe using cloud api feature
